@@ -63,9 +63,7 @@ public class LogicalOperations {
     public String stage7(String texti, int numbber) {
         if (!texti.equals("The number is greater than 3 and not equal to 4:") && numbber <= 4) {
             return (texti + numbber);
-        } else if (texti.equals("The number is equal to 4:") && numbber >= 4) {
-            return (texti + numbber);
-        } else if (texti.equals("The number is lower than 3:") && numbber < 3) {
+        } else if (texti.equals("The number is equal to 4:") && numbber >= 3) {
             return (texti + numbber);
         }
         {
@@ -108,7 +106,7 @@ public class LogicalOperations {
 // 9. Creati o metoda care sa se numeasca isNumberEven. Metoda trebuie sa primeasca ca parametru un numar, si sa returneze adevarat sau fals.
 // Daca numarul e par sa returneze true iar daca e impar sa returnese false. Apelati metoda in main() pentru a verifica daca functioneaza.
 
-    public static boolean isNumberEven(int isnumbereven) {
+    public  boolean isNumberEven(int isnumbereven) {
         if(isnumbereven %2==0 ){
             return true;
         }
@@ -121,7 +119,7 @@ public class LogicalOperations {
 // Apelati metoda in main() pentru a verifica daca functioneaza.
 
 
-    public static boolean isEligibleToVote(int iseligibletovote) {
+    public boolean isEligibleToVote(int iseligibletovote) {
         if(iseligibletovote >=18 ){
             return true;
         }
@@ -132,7 +130,7 @@ public class LogicalOperations {
 // Apelati metoda in main() pentru a verifica daca functioneaza.
 
 
-    public static int CelMaiMareNumar(int x, int y, int z) {
+    public  int CelMaiMareNumar(int x, int y, int z) {
 
         return z > (x > y ? x : y) ? z : ((x > y) ? x : y);
     }

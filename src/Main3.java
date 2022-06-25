@@ -38,9 +38,9 @@ public class Main3 {
     System.out.println(op.stage6(textIn, numb));
 
     // 7.
-    int numbber = 2;
-    String texti = "Numarul este mai mic decat 3:";
-    System.out.println(op.stage7(texti, numbber));
+    int numbber = 0;
+    String texti="Numarul este mai mic decat 3:";
+    System.out.println(op.stage7(texti,numbber));
 
     // 8.
     int the_number = 2022;
