@@ -38,7 +38,7 @@ public class Main3 {
     System.out.println(op.stage6(textIn, numb));
 
     // 7.
-    int numbber = 0;
+    int numbber = 5;
     String texti="Numarul este mai mic decat 3:";
     System.out.println(op.stage7(texti,numbber));
 
@@ -62,6 +62,14 @@ public class Main3 {
     System.out.println("Cel mai mare numar este:" + " " +op.CelMaiMareNumar(x,y,z) + " "+"!");
 
     }
+
+   int sum=0;
+   int suma=10;
+
+
+
+
+
   }
 
 

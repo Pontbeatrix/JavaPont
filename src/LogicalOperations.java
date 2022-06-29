@@ -61,13 +61,18 @@ public class LogicalOperations {
 // Apelati metoda in main() pentru a verifica daca functioneaza.
 
     public String stage7(String texti, int numbber) {
-        if (!texti.equals("The number is greater than 3 and not equal to 4:") && numbber <= 4) {
-            return (texti + numbber);
-        } else if (texti.equals("The number is equal to 4:") && numbber >= 3) {
-            return (texti + numbber);
-        }
-        {
-            return "0";
+        if ( numbber > 3 && numbber != 4) {
+
+            return "The number is greater than 3 and not equal to 4";
+
+        } else if (numbber == 4) {
+
+            return "The number is equal to 4";
+
+        } else if (numbber < 3); {
+
+            return "The number is lower than 3";
+
         }
 
     }
@@ -100,14 +105,14 @@ public class LogicalOperations {
                 break;
 
         }
-        return name ;
+        return name;
     }
 
 // 9. Creati o metoda care sa se numeasca isNumberEven. Metoda trebuie sa primeasca ca parametru un numar, si sa returneze adevarat sau fals.
 // Daca numarul e par sa returneze true iar daca e impar sa returnese false. Apelati metoda in main() pentru a verifica daca functioneaza.
 
-    public  boolean isNumberEven(int isnumbereven) {
-        if(isnumbereven %2==0 ){
+    public boolean isNumberEven(int isnumbereven) {
+        if (isnumbereven % 2 == 0) {
             return true;
         }
         return false;
@@ -119,8 +124,8 @@ public class LogicalOperations {
 // Apelati metoda in main() pentru a verifica daca functioneaza.
 
 
-    public boolean isEligibleToVote(int iseligibletovote) {
-        if(iseligibletovote >=18 ){
+    public  boolean isEligibleToVote(int iseligibletovote) {
+        if (iseligibletovote >= 18) {
             return true;
         }
         return false;
@@ -130,10 +135,9 @@ public class LogicalOperations {
 // Apelati metoda in main() pentru a verifica daca functioneaza.
 
 
-    public  int CelMaiMareNumar(int x, int y, int z) {
+    public int CelMaiMareNumar(int x, int y, int z) {
 
         return z > (x > y ? x : y) ? z : ((x > y) ? x : y);
     }
-
-
+//1.write a java program to count backwards from a given number to a lower given number
 }
