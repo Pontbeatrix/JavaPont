@@ -163,7 +163,7 @@ public class LogicalOperations {
 
     public void NumaratoarePanaLaMinusOSuta(int q) {
         System.out.print("\n2. NumaratoarePanaLaMinusOSuta:\n");
-         for (int u = q; u >= -100; u--){
+        for (int u = q; u >= -100; u--) {
             System.out.println(u);
         }
     }
@@ -433,14 +433,162 @@ public class LogicalOperations {
             } else if (x % 3 != 0 && x % 5 != 0 && x % 7 != 0) {
                 System.out.print(" " + x);
             }
-
-
             if (x % 11 == 0) {
                 System.out.println();
             }
         }
     }
 
+    // LAB 13- Array
+    // 2.  In clasa LogicalOp, creati o metoda care sa scrie pe un array de 100 de pozitii, valorile de la 1 la 100.
+    // Sa se afiseze progresul in consola pe tot parcursul. Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public int[] populateArrayUpToNumber(int number) {
+        System.out.println("\n2. Position in arrey :\n");
+        int[] array = new int[100];
+        for (int i = 0; i <= 99; i++) {
+            array[i] = i + 1;
+            System.out.print(array[i] + " ");
+        }
+
+        return array;
+    }
+//3. Creati o metoda care primeasca un parametru de tip array de numere intregi gol, si sa il returneze populat cu toate valorile pare de la 1 la 100.
+// Apelati metoda in main() pentru a verifica daca functioneaza. Atentie, metoda returneaza un array, deci acesta va trebui surprins si afisat folosind o bucla.
+
+    public int evenNumberArray(int b) {
+        System.out.print("\n3. ToateNumerelePare: \n");
+        int number = 100;
+        for (int i = 1; i <= number; i++) {
+            if (i % 2 == 0)
+                System.out.print(i + " ");
+        }
+        return b;
+    }
+
+
+// 4. Creati o metoda care sa primeasca un parametru de tip array de numere, si sa fie populat cu valori.
+// Metoda sa calculeze si sa returneze media numerelor din array.
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public double getAverageFromArray(int[] array) {
+        System.out.println("\n4.Average number:");
+        double sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum / array.length;
+    }
+
+//5. Creati o metoda care sa primeasca un parametru de tip array de string-uri, populat cu valori, si un parametru de tip String.
+// Metoda sa verifice daca valoarea string-ului primit se regaseste in array-ul primit, iar daca da sa returneze true iar daca nu, sa returneze false.
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public boolean isValueInArray(String[] array, String value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+//6. Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori, si un parametru de tip numar.
+// Metoda sa verifice daca numarul primit se afla in array-ul primit, si daca da, atunci sa returneze pozitia pe care se afla numarul.
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+
+    public static int findIndex(int[] my_array, int t) {
+        if (my_array == null) return -1;
+        int len = my_array.length;
+        int i = 0;
+        while (i < len) {
+            if (my_array[i] == t) return i;
+            else i = i + 1;
+        }
+        return -1;
+
+
+    }
+//7. Creati o metoda care sa afiseze urmatoarea grila, folosind un array:
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+//- - - - - - - - - -
+
+    public void afisezeUrmatoareaGrila() {
+        int[][] a = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.printf("- ", a[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+//8. Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori, si un parametru de tip numar.
+// Metoda sa verifice daca numarul exista in array, si daca da, sa returneze array-ul primit, fara acel numar.
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public static int indexOfIntArray(int[] array, int key) {
+        int returnvalue = -1;
+        for (int i = 0; i < array.length; ++i) {
+            if (key == array[i]) {
+                returnvalue = i;
+                break;
+            }
+        }
+        return returnvalue;
+    }
+
+
+    //9. Creati o metoda care sa primeasca un array, si sa returneze al doilea cel mai mic numar din array.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public int getSmallest() {
+        int[] arr = new int[]{25, 11, 7, 75, 56};
+        int min = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min)
+                min = arr[i];
+        }
+        return min;
+    }
+
+
+//10. Creati o metoda care sa primeasca doi parametrii: un array populat cu valori, si un array gol.
+// Metoda sa copieze toate valorile din primul array, parcurgandu-l, in cel de-al doilea.
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public static void CopiezeToateValorileDinPrimulArray(int[] aaa, int[] bbb) {
+        System.out.println("\n10. CopiezeToateValorileDinPrimulArray:\n");
+        bbb = aaa;
+
+        bbb[0]++;
+
+        System.out.println("Continutul primul array (aaa): ");
+        for (int i = 0; i < aaa.length; i++)
+            System.out.print(aaa[i] + " ");
+
+        System.out.println("\nContinutul al doilea array (bbb): ");
+        for (int i = 0; i < bbb.length; i++)
+            System.out.print(bbb[i] + " ");
+
+
+    }
 
 
 }
+
+
+
+
+
+
+

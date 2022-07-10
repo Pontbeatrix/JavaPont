@@ -31,8 +31,6 @@ public class AppMain {
         oscar.waveTail();
 
 
-        Cat bella = new Cat("Bella", "asian", 3, "grey", 5, 9, 8, 8, 9, "whiskas", "box");
-        System.out.println("Name: " + (bella.getName() + "\nRace: " + bella.getRace() + "\nAge: " + bella.getAge() + "\nColor: " + bella.getColor() + "\nWeight: " + bella.getWeigth() + "\nHeight : " + bella.getHeightcm() + "\nHealth: " + bella.getHealth() + "\nFullness: " + bella.getFullness() + "\nMood: " + bella.getMoood() + "\nFavorit food: " + bella.getFavoritfood() + "\nPreferred Activity: " + bella.getPreferredActivity()));
 
         AnimalFood animalFood = new AnimalFood(99, 9, 8);
         System.out.println("Price: " + (animalFood.getFoodprice()+"\nQty: "+ animalFood.getQuantityfood()+"\nStock: "+ animalFood.getInstock()));
