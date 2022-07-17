@@ -1,3 +1,6 @@
+
+import java.util.List;
+
 public class LogicalOperations {
 
     ////2. Given a text input, if it is “FastTrack”, then print “Learning text comparison”. If not, print
@@ -566,7 +569,7 @@ public class LogicalOperations {
 // Metoda sa copieze toate valorile din primul array, parcurgandu-l, in cel de-al doilea.
 // Apelati metoda in main() pentru a verifica daca functioneaza.
 
-    public static void CopiezeToateValorileDinPrimulArray(int[] aaa, int[] bbb) {
+    public static void copiezeToateValorileDinPrimulArray(int[] aaa, int[] bbb) {
         System.out.println("\n10. CopiezeToateValorileDinPrimulArray:\n");
         bbb = aaa;
 
@@ -583,8 +586,106 @@ public class LogicalOperations {
 
     }
 
+//##########################################################################################################################################
+//#############################################LAB 14-Tema JAVA list#######################################################################
+
+    //1.Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou.
+
+    public void printNumbersFromList(List<Integer> myListOfInt) {
+        System.out.println("\n1. printNumbersFromList:\n");
+        for (int i = 1; i <= 10; i++) {
+            myListOfInt.add(i);
+        }
+        for (Integer value : myListOfInt) {
+            System.out.println(value);
+        }
+    }
+
+    // 2. Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru sa fie o lista de numere,
+    // si celalalt un numar (real sau intreg). Metoda sa adauge numarul primit ca si parametru la final de lista.
+
+    public void listToNumber(List<Integer> myList, int unNumar) {
+        System.out.println("\n2. listToNumber:\n");
+        myList.add(unNumar);
+        System.out.println(myList);
+    }
+
+
+
+//3.Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru de tip Lista, iar celalalt un numar intreg.
+// Sa se parcurga lista si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou,
+// pornind de la numarul intreg primit ca si parametru.
+
+    public void myAllNumberFromList(List<Integer> myListInt) {
+        System.out.println("\n3. myListInt :\n");
+        int i;
+        for (i = 50; i <= 100; i++) {
+            myListInt.add(i);
+        }
+        for (Integer value : myListInt) {
+            System.out.println(value);
+        }
+    }
+
+
+//4.Scrieti o metoda Java,
+// care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista, dar invers(de la capat la inceput).
+
+    public void printNumbersBackwardsFromList(List<Integer> myLists) {
+        System.out.println("\n4.printNumbersBackwardsFromList :\n");
+        for (int i = myLists.size() - 1; i >= 0; i--) {
+            System.out.println(myLists.get(i));
+        }
+
+    }
+//5.Scrieti o metoda Java, care sa primeasca trei parametrii: unul de tip Lista de String-uri, unul de tip intreg, si unul de tip String.
+// Metoda sa adauge parametrul de tip String in lista primita, iar parametrul de tip intreg reprezinta pozitia la care sa fie pus acel String.
+
+
+
+
+
+//6.Scrieti o metoda Java, care sa primeasca doi parametrii.
+// Primul dintre ei va fi o Lista, iar metoda sa ia al doilea parametru si sa il adauge pe prima pozitie din lista.
+public void myFirstList(List<Integer> myfirstlist) {
+    System.out.println("\n6.  myFirstList:\n");
+    myfirstlist.add(3);
+    System.out.println(myfirstlist);
+}
+
+// 7. Scrieti o metoda Java care sa primeasca parametru o Lista, si sa afiseze ce valori are lista, si ce pe ce pozitie. (Ex: “Pe pozitia 1 valoare este 4”).
+ public void arrList(List<String>positionlist){
+     System.out.println("\n7.  positionlist:\n");
+     System.out.println("Size of list: " + positionlist.size());
+     for (String value : positionlist) {
+         System.out.println("Pozitia= " + value);
+     }
+ }
+
+//8.Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
+
+    public int getHighestNumber(List<Integer> unorderedList) {
+        System.out.println("\n8.   unorderedList:\n");
+        int max = unorderedList.get(0);
+
+        for (int x : unorderedList) {
+            if (x > max) {
+                max = x;
+            }
+        }
+
+        return max;
+
+    }
 
 }
+
+
+
+
+
+
+
 
 
 

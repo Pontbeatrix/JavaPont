@@ -1,7 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main4 {
-
 
 
     public static void main(String[] args) {
@@ -110,8 +111,7 @@ public class Main4 {
 
         // 10.
 //#########################################################################################################################################
- //#################################################Lab 13 - Java Arrays#####################################################################
-
+        //#################################################Lab 13 - Java Arrays#####################################################################
 
 
         int hhh = 1;
@@ -150,22 +150,50 @@ public class Main4 {
         //8.
 
         int[] aRray = {3, 4, 5, 9, 11, 99};
-        System.out.println("8.Index position: "+op. indexOfIntArray(aRray, 11));
+        System.out.println("8.Index position: " + op.indexOfIntArray(aRray, 11));
 
         //9.
 
 
         System.out.println("9.Smallest element present in given array: " + op.getSmallest());
 
-    // 10.
+        // 10.
 
 
-        int aaa[] = { 0, 9, 9, 4 };
+        int aaa[] = {0, 9, 9, 4};
         int bbb[] = new int[aaa.length];
-       op.CopiezeToateValorileDinPrimulArray(aaa,bbb);
+        op.copiezeToateValorileDinPrimulArray(aaa, bbb);
+
+
+// Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru sa fie o lista de numere, si celalalt un numar (real sau intreg).
+// Metoda sa adauge numarul primit ca si parametru la final de lista.
 
     }
-    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
