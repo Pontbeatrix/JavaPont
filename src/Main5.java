@@ -24,7 +24,10 @@ public class Main5 {
         // 3.
 
         List<Integer> myListInt = new ArrayList<>();
-        op.myAllNumberFromList(myListInt);
+        myListInt.add(23);
+        myListInt.add(22);
+        myListInt.add(24);
+        op.myAllNumberFromList(myListInt, 1);
 
         // 4.
         List<Integer> myLists = new ArrayList<>();
@@ -52,10 +55,17 @@ public class Main5 {
         unorderedList.add(13);
         unorderedList.add(11);
         unorderedList.add(123);
+        unorderedList.add(4203);
         unorderedList.add(12);
 
         System.out.println(op.getHighestNumber(unorderedList));
 
+        //.5
+
+        int[] aRray = {3, 4, 5, 9, 11, 99};
+        op.arrayNumber(aRray,8);
+
+        op.waitPlease(5);
     }
 
 

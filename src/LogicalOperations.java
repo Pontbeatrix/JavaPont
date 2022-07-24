@@ -1,5 +1,7 @@
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class LogicalOperations {
 
@@ -611,20 +613,22 @@ public class LogicalOperations {
     }
 
 
-
 //3.Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru de tip Lista, iar celalalt un numar intreg.
 // Sa se parcurga lista si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou,
 // pornind de la numarul intreg primit ca si parametru.
 
-    public void myAllNumberFromList(List<Integer> myListInt) {
+    public void myAllNumberFromList(List<Integer> myListInt, int startfrom ) {
         System.out.println("\n3. myListInt :\n");
-        int i;
-        for (i = 50; i <= 100; i++) {
-            myListInt.add(i);
+        List<Integer> newArray = new ArrayList<>();
+
+        for (int i = startfrom; i <= myListInt.size() - 1; i++) {
+            newArray.add(myListInt.get(i));
         }
-        for (Integer value : myListInt) {
-            System.out.println(value);
+
+        for (int number: newArray) {
+            System.out.println(number);
         }
+
     }
 
 
@@ -642,25 +646,22 @@ public class LogicalOperations {
 // Metoda sa adauge parametrul de tip String in lista primita, iar parametrul de tip intreg reprezinta pozitia la care sa fie pus acel String.
 
 
-
-
-
-//6.Scrieti o metoda Java, care sa primeasca doi parametrii.
+    //6.Scrieti o metoda Java, care sa primeasca doi parametrii.
 // Primul dintre ei va fi o Lista, iar metoda sa ia al doilea parametru si sa il adauge pe prima pozitie din lista.
-public void myFirstList(List<Integer> myfirstlist) {
-    System.out.println("\n6.  myFirstList:\n");
-    myfirstlist.add(3);
-    System.out.println(myfirstlist);
-}
+    public void myFirstList(List<Integer> myfirstlist) {
+        System.out.println("\n6.  myFirstList:\n");
+        myfirstlist.add(3);
+        System.out.println(myfirstlist);
+    }
 
-// 7. Scrieti o metoda Java care sa primeasca parametru o Lista, si sa afiseze ce valori are lista, si ce pe ce pozitie. (Ex: “Pe pozitia 1 valoare este 4”).
- public void arrList(List<String>positionlist){
-     System.out.println("\n7.  positionlist:\n");
-     System.out.println("Size of list: " + positionlist.size());
-     for (String value : positionlist) {
-         System.out.println("Pozitia= " + value);
-     }
- }
+    // 7. Scrieti o metoda Java care sa primeasca parametru o Lista, si sa afiseze ce valori are lista, si ce pe ce pozitie. (Ex: “Pe pozitia 1 valoare este 4”).
+    public void arrList(List<String> positionlist) {
+        System.out.println("\n7.  positionlist:\n");
+        System.out.println("Size of list: " + positionlist.size());
+        for (String value : positionlist) {
+            System.out.println("Pozitia= " + value);
+        }
+    }
 
 //8.Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
 
@@ -678,7 +679,39 @@ public void myFirstList(List<Integer> myfirstlist) {
 
     }
 
+    //5. In clasa LogicalOp, creati o metoda care sa primeasca un array de numere ca si parametru, si un numar.
+    // Fara a folosi conditii, si folosind un try-catch, afisati valoarea de pe pozitia numarului primit,
+    // iar daca valoarea numarului este mai mare decat numarul de pozitii din array, afisati textul: "Inside catch, number too large".
+
+    public int arrayNumber(int[] array, int number) {
+
+        try {
+            System.out.println(array[number]);
+
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("\n5.Inside catch, number too large");
+
+        }
+        return number;
+    }
+//6. In clasa LogicalOp, creati o metoda  'wait()'. Metoda sa nu returneze nimic, dar sa primeasca un parametru de tip int.
+// In interiorul ei, tratati metoda Thread.sleep(), astfel incat metoda noastra sa primeasca valoarea in secunde, cat sa astepte.
+// Ex: wait(5) -> asteapta 5 secunde.Mentiune: metoda Thread.sleep() se foloseste de milisecunde pentru a astepta.
+
+public void waitPlease(int secunde){
+    System.out.println("\n6.Wait please:"+ secunde);
+        try{
+            secunde=1000*secunde;
+            Thread.sleep(secunde);
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
 }
+
+
+}
+
 
 
 
